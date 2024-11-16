@@ -1,0 +1,56 @@
+#include <iostream>
+using namespace std;
+
+int main() {
+    int birthYear, birthMonth, birthDay;
+    int currentYear, currentMonth, currentDay;
+
+    // Input: Birth Date
+    cout << "Enter Your Birth Year: ";
+    cin >> birthYear;
+    cout << "Enter Your Birth Month: ";
+    cin >> birthMonth;
+    cout << "Enter Your Birth Day: ";
+    cin >> birthDay;
+
+    // Input: Current Date
+    cout << "Enter Your Current Year: ";
+    cin >> currentYear;
+    cout << "Enter Your Current Month: ";
+    cin >> currentMonth;
+    cout << "Enter Your Current Day: ";
+    cin >> currentDay;
+
+    // Calculating the age in years, months, and days
+    int ageYears = currentYear - birthYear;
+    int ageMonths = currentMonth - birthMonth;
+    int ageDays = currentDay - birthDay;
+
+    // Adjust for negative days
+    if (ageDays < 0) {
+        ageDays += 30;  // Approximation for days in a month
+        ageMonths--;
+    }
+
+    // Adjust for negative months
+    if (ageMonths < 0) {
+        ageMonths += 12;
+        ageYears--;
+    }
+
+    // Total age in days, weeks, and hours
+    int totalDays = ageYears * 365 + ageMonths * 30 + ageDays; // Approximation
+    int totalWeeks = totalDays / 7;
+    int remainingDays = totalDays % 7;
+    int totalHours = totalDays * 24;
+
+    // Output
+    cout << "\nAge in Different Formats:" << endl;
+    cout << ageYears << " years " << ageMonths << " months " << ageDays << " days" << endl;
+    cout << (ageYears * 12 + ageMonths) << " months " << ageDays << " days" << endl;
+    cout << totalWeeks << " weeks " << remainingDays << " days" << endl;
+    cout << totalDays << " days" << endl;
+    cout << totalHours << " hours" << endl;
+
+    return 0;
+}
