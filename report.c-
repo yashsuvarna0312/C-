@@ -1,0 +1,102 @@
+#include <iostream>
+using namespace std;
+
+int main() {
+    // Input Section
+    string name;
+    string rollNumber;
+    int javaMarks, cppMarks, goMarks, rubyMarks, csharpMarks, pythonMarks;
+
+    cout << "Enter your name: ";
+    cin >> name;
+    
+    cout << "Enter Your Roll Number: ";
+    cin >> rollNumber;
+    
+    cout << "Enter Your JAVA Marks: ";
+    cin >> javaMarks;
+    
+    cout << "Enter Your C++ Marks: ";
+    cin >> cppMarks;
+    
+    cout << "Enter Your Go Marks: ";
+    cin >> goMarks;
+    
+    cout << "Enter Your Ruby Marks: ";
+    cin >> rubyMarks;
+    
+    cout << "Enter Your C# Marks: ";
+    cin >> csharpMarks;
+    
+    cout << "Enter Your Python Marks: ";
+    cin >> pythonMarks;
+
+    // Output Section
+    cout << endl;
+
+    // Displaying individual subject results
+    cout << "JAVA = " << javaMarks << "/100 ";
+    if (javaMarks < 30) cout << "F";
+    else if (javaMarks < 40) cout << "D";
+    else if (javaMarks < 60) cout << "C";
+    else if (javaMarks < 80) cout << "B";
+    else cout << "A";
+    cout << endl;
+
+    cout << "C++ = " << cppMarks << "/100 ";
+    if (cppMarks < 30) cout << "F";
+    else if (cppMarks < 40) cout << "D";
+    else if (cppMarks < 60) cout << "C";
+    else if (cppMarks < 80) cout << "B";
+    else cout << "A";
+    cout << endl;
+
+    cout << "Go = " << goMarks << "/100 ";
+    if (goMarks < 30) cout << "F";
+    else if (goMarks < 40) cout << "D";
+    else if (goMarks < 60) cout << "C";
+    else if (goMarks < 80) cout << "B";
+    else cout << "A";
+    cout << endl;
+
+    cout << "Ruby = " << rubyMarks << "/100 ";
+    if (rubyMarks < 30) cout << "F";
+    else if (rubyMarks < 40) cout << "D";
+    else if (rubyMarks < 60) cout << "C";
+    else if (rubyMarks < 80) cout << "B";
+    else cout << "A";
+    cout << endl;
+
+    cout << "C# = " << csharpMarks << "/100 ";
+    if (csharpMarks < 30) cout << "F";
+    else if (csharpMarks < 40) cout << "D";
+    else if (csharpMarks < 60) cout << "C";
+    else if (csharpMarks < 80) cout << "B";
+    else cout << "A";
+    cout << endl;
+
+    cout << "Python = " << pythonMarks << "/100 ";
+    if (pythonMarks < 30) cout << "F";
+    else if (pythonMarks < 40) cout << "D";
+    else if (pythonMarks < 60) cout << "C";
+    else if (pythonMarks < 80) cout << "B";
+    else cout << "A";
+    cout << endl;
+
+    // Total and Percentage
+    int totalMarks = javaMarks + cppMarks + goMarks + rubyMarks + csharpMarks + pythonMarks;
+    int maxMarks = 600;
+    float percentage = (float)totalMarks / maxMarks * 100;
+
+    cout << "\nTotal = " << totalMarks << "/" << maxMarks << endl;
+    cout << "Percentage = " << percentage << "%" << endl;
+
+    // Check pass or fail
+    if (percentage >= 40) {
+        cout << "PASS" << endl;
+    } else {
+        cout << "FAIL" << endl;
+    }
+
+    return 0;
+}
